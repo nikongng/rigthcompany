@@ -1,0 +1,304 @@
+/* -------------------------------------------------------------------
+   STYLES CSS EXTERNES
+   ------------------------------------------------------------------- */
+
+/* CHANGEMENT : Définition des variables de couleur
+*/
+:root {
+  --couleur-primaire: #d7230b;
+  --couleur-primaire-hover: #ca1d06;
+  --couleur-secondaire: #0a4fb3;
+  --couleur-secondaire-hover: #094bb5;
+  --couleur-texte-principal: #0f1724;
+  --couleur-texte-secondaire: #334155;
+  --couleur-texte-meta: #475569;
+  --couleur-texte-footer: #64748b;
+  --couleur-fond-body: #f6f8f;
+  --couleur-fond-header: #fff;
+  --couleur-fond-carte: #fff;
+  --couleur-fond-footer: #f1f5f9;
+  --couleur-blanc: #fff;
+  --couleur-bordure-input: #cbd5e1;
+}
+
+/* --- Styles de base --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--couleur-fond-body);
+  color: var(--couleur-texte-principal);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  padding: 60px 50px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--couleur-primaire);
+  font-weight: 700;
+}
+
+/* --- Header & Navigation --- */
+header {
+  background: var(--couleur-fond-header);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* CHANGEMENT : Styles pour le conteneur du logo */
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--couleur-primaire);
+}
+.logo img {
+  height: 40px; /* Ajustez la taille de votre logo si nécessaire */
+  vertical-align: middle;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  background: var(--couleur-primaire);
+  color: var(--couleur-blanc);
+}
+
+.cta {
+  background: var(--couleur-primaire);
+  color: var(--couleur-blanc);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.cta:hover {
+  background: var(--couleur-primaire-hover);
+}
+
+/* --- Section Hero --- */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 50px;
+  background: linear-gradient(135deg, var(--couleur-primaire), var(--couleur-secondaire));
+  color: var(--couleur-blanc);
+  border-radius: 12px;
+  margin: 20px 50px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 20px;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+}
+
+.hero img {
+  flex: 1;
+  min-width: 300px;
+  border-radius: 12px;
+  max-width: 500px;
+}
+
+/* --- Section Services --- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: row;
+  background: var(--couleur-fond-carte);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+.service-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+.service-info h3 {
+  color: var(--couleur-primaire);
+  margin-bottom: 6px;
+}
+
+.service-info p {
+  font-size: 0.95rem;
+  color: var(--couleur-texte-secondaire);
+}
+
+/* --- Section À Propos --- */
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-card {
+  flex: 1;
+  min-width: 300px;
+  background: var(--couleur-fond-carte);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.about-card h3 {
+  color: var(--couleur-primaire);
+  margin-bottom: 12px;
+}
+
+.about-card ul {
+  margin-left: 20px;
+  margin-top: 8px;
+}
+
+.about-card ul li {
+  margin-bottom: 6px;
+}
+
+/* --- Section Contact --- */
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+.contact-card {
+  flex: 1;
+  min-width: 300px;
+  background: var(--couleur-fond-carte);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card input,
+.contact-card textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--couleur-bordure-input);
+  font-size: 1rem;
+}
+
+.contact-card button {
+  background: var(--couleur-primaire);
+  color: var(--couleur-blanc);
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-card button:hover {
+  background: var(--couleur-secondaire-hover);
+}
+
+.contact-card .contact-meta {
+  margin-top: 20px; /* Ajout d'un espace */
+}
+
+.contact-card .contact-meta p {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: var(--couleur-texte-meta);
+}
+
+/* Statut du formulaire */
+#formStatus {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--couleur-texte-footer);
+  background: var(--couleur-fond-footer);
+  font-size: 14px;
+}
+
+/* --- Media Queries (Responsive) --- */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero img {
+    margin-top: 20px;
+  }
+  .service-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .service-card img {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+}
