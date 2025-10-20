@@ -1,0 +1,6 @@
+# Autorise tous les moteurs de recherche à explorer ton site
+User-agent: *
+Allow: /
+
+# Indique à Google où trouver ton plan du site (sitemap)
+Sitemap: https://www.rigthcompany.com/sitemap.xml
